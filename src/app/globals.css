@@ -1,26 +1,84 @@
+@config "../../tailwind.config.ts";
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0B0F19;
+  --foreground: #F9FAFB;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #0B0F19;
+  --color-foreground: #F9FAFB;
+  --color-titanium-dark: #0B0F19;
+  --color-cyber-blue: #13BFFF;
+  --color-neon-purple: #A855F7;
+  --color-fire-orange: #FF8A00;
+  --color-emerald-ahead: #22C55E;
+  --color-muted-gray: #9CA3AF;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #0B0F19;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-color: #13BFFF #111827;
+  scrollbar-width: thin;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: #0B0F19;
+  color: #F9FAFB;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+::selection {
+  background: #13BFFF;
+  color: #0B0F19;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #111827;
+  border-radius: 999px;
+  background: #13BFFF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A855F7;
+}
+
+:focus-visible {
+  outline: 2px solid #13BFFF;
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
