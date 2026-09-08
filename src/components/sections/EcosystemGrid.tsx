@@ -17,8 +17,8 @@ const modules = [
     image: "/dashboardimg.png",
     imageWidth: 900,
     imageHeight: 560,
-    imageClassName: "h-full w-full object-contain p-2",
-    imageWrapClassName: "bg-slate-950/60",
+    imageClassName: "h-full w-full object-contain p-1 sm:p-2",
+    imageWrapClassName: "h-52 bg-slate-950/60 sm:h-44",
   },
   {
     number: "02",
@@ -95,7 +95,7 @@ export default function EcosystemGrid() {
           {modules.map((module) => {
             const card = (
               <article
-                className={`group relative flex min-h-80 flex-col overflow-hidden border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 ${module.accentBorder} ${module.accentGlow} sm:p-8`}
+                className={`group relative flex min-h-[22rem] flex-col overflow-hidden border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 ${module.accentBorder} ${module.accentGlow} sm:min-h-80 sm:p-8`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-mono text-[10px] tracking-[0.14em] text-muted-gray">{module.category}</span>
@@ -103,7 +103,7 @@ export default function EcosystemGrid() {
                 </div>
                 <div className={`mt-10 h-px w-12 bg-current ${module.accentText} transition-all duration-300 group-hover:w-20`} />
                 <h3 className="mt-5 text-2xl font-semibold tracking-[-0.025em] text-white">{module.title}</h3>
-                <div className={`relative mt-5 h-44 w-full overflow-hidden rounded-lg border border-slate-800/80 shadow-inner transition-all duration-300 group-hover:border-cyan-500/30 ${module.imageWrapClassName}`}>
+                <div className={`relative mt-5 h-52 w-full overflow-hidden rounded-lg border border-slate-800/80 shadow-inner transition-all duration-300 group-hover:border-cyan-500/30 sm:h-44 ${module.imageWrapClassName}`}>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(19,191,255,0.18),transparent_30%),radial-gradient(circle_at_80%_30%,rgba(168,85,247,0.12),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]" />
                   <div className="pointer-events-none absolute -inset-x-8 top-[-30%] h-[170%] bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent blur-2xl animate-pulse" />
                   <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
