@@ -15,7 +15,9 @@ const modules = [
     cta: "Acceder al Dashboard ->",
     href: DASHBOARD_URL,
     image: "/dashboardimg.png",
-    imageClassName: "object-contain p-2",
+    imageWidth: 900,
+    imageHeight: 560,
+    imageClassName: "h-full w-full object-contain p-2",
     imageWrapClassName: "bg-slate-950/60",
   },
   {
@@ -31,7 +33,9 @@ const modules = [
     cta: "Ver Catálogo Digital ->",
     href: TECNOSOLAR_URL,
     image: "/logoTecnosolar.png",
-    imageClassName: "object-contain p-3 drop-shadow-[0_0_15px_rgba(245,158,11,0.15)]",
+    imageWidth: 900,
+    imageHeight: 560,
+    imageClassName: "h-full w-full object-contain p-3 drop-shadow-[0_0_15px_rgba(245,158,11,0.15)]",
     imageWrapClassName: "border-amber-500/20 bg-gradient-to-b from-amber-500/5 via-slate-950 to-slate-950",
   },
   {
@@ -46,7 +50,9 @@ const modules = [
     accentGlow: "hover:shadow-[0_0_34px_rgba(19,191,255,0.14)]",
     cta: "Unirse a la Lista de Espera ->",
     image: "/languagesLogo.png",
-    imageClassName: "object-contain p-2",
+    imageWidth: 900,
+    imageHeight: 560,
+    imageClassName: "h-full w-full object-contain p-2",
     imageWrapClassName: "bg-slate-950/60",
   },
   {
@@ -61,7 +67,9 @@ const modules = [
     accentGlow: "hover:shadow-[0_0_34px_rgba(168,85,247,0.16)]",
     cta: "Conocer el Manifiesto ->",
     image: "/jedadilifestyleimg.png",
-    imageClassName: "object-cover",
+    imageWidth: 900,
+    imageHeight: 560,
+    imageClassName: "h-full w-full object-cover",
     imageWrapClassName: "bg-slate-950/60",
   },
 ];
@@ -98,13 +106,15 @@ export default function EcosystemGrid() {
                 <div className={`relative mt-5 h-44 w-full overflow-hidden rounded-lg border border-slate-800/80 shadow-inner transition-all duration-300 group-hover:border-cyan-500/30 ${module.imageWrapClassName}`}>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(19,191,255,0.18),transparent_30%),radial-gradient(circle_at_80%_30%,rgba(168,85,247,0.12),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]" />
                   <div className="pointer-events-none absolute -inset-x-8 top-[-30%] h-[170%] bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent blur-2xl animate-pulse" />
-                  <Image
-                    src={module.image}
-                    alt={module.title}
-                    fill
-                    className={`${module.imageClassName} transition-transform duration-500 group-hover:scale-105`}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                  <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+                    <Image
+                      src={module.image}
+                      alt={module.title}
+                      width={module.imageWidth}
+                      height={module.imageHeight}
+                      className={`${module.imageClassName} transition-transform duration-500 group-hover:scale-105`}
+                    />
+                  </div>
                 </div>
                 <p className="mt-3 max-w-md text-sm leading-6 text-muted-gray">{module.description}</p>
                 <div className="mt-auto flex items-end justify-between gap-4 pt-8">
