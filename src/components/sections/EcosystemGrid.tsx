@@ -69,7 +69,7 @@ const modules = [
     image: "/jedadilifestyleimg.png",
     imageWidth: 900,
     imageHeight: 560,
-    imageClassName: "h-full w-full object-cover",
+    imageClassName: "h-full w-full object-contain p-2",
     imageWrapClassName: "bg-slate-950/60",
   },
 ];
