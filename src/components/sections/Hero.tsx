@@ -1,3 +1,5 @@
+import { FACEBOOK_URL, INSTAGRAM_URL, TIKTOK_URL } from "@/config/links";
+
 const metrics = [
   { label: "ENERGÍA SOLAR", value: "Instalación & Ingeniería", color: "text-fire-orange" },
   { label: "SISTEMA SAAS", value: "Organización Anti-Estrés", color: "text-emerald-ahead" },
@@ -17,7 +19,33 @@ export default function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(11,15,25,0.1),#0B0F19_88%)]" />
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center text-center">
-        <div className="mb-8 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-cyber-blue sm:mb-10">
+        <div className="mx-auto mt-2 mb-3 flex w-full justify-center sm:mt-3 sm:mb-4">
+          <details className="group relative">
+            <summary className="flex cursor-pointer list-none items-center gap-2 rounded-full border border-cyber-blue/70 bg-cyber-blue/10 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-cyber-blue shadow-[0_0_22px_rgba(19,191,255,0.16)] transition hover:border-cyber-blue hover:bg-cyber-blue/20 [&::-webkit-details-marker]:hidden">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-cyber-blue/70 bg-[#0B0F19] text-sm font-bold text-cyber-blue">
+                J/
+              </span>
+              <span className="text-muted-gray">Redes sociales</span>
+            </summary>
+            <div className="absolute left-1/2 top-[calc(100%+0.35rem)] z-30 w-60 -translate-x-1/2 border border-cyber-blue/35 bg-[#080C14]/95 p-3 text-left shadow-[0_0_30px_rgba(19,191,255,0.18)] backdrop-blur-xl">
+              <p className="px-2 pb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-gray">/ Redes sociales</p>
+              <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between px-2 py-3 font-mono text-sm text-white/80 transition-colors hover:bg-cyber-blue/10 hover:text-cyber-blue">
+                TikTok
+                <span className="text-xs text-white/40" aria-hidden="true">-&gt;</span>
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between px-2 py-3 font-mono text-sm text-white/80 transition-colors hover:bg-neon-purple/10 hover:text-neon-purple">
+                Instagram
+                <span className="text-xs text-white/40" aria-hidden="true">-&gt;</span>
+              </a>
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between px-2 py-3 font-mono text-sm text-white/80 transition-colors hover:bg-cyber-blue/10 hover:text-cyber-blue">
+                Facebook
+                <span className="text-xs text-white/40" aria-hidden="true">-&gt;</span>
+              </a>
+            </div>
+          </details>
+        </div>
+
+        <div className="mt-3 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-cyber-blue sm:mt-4">
           <span className="h-px w-8 bg-cyber-blue/60 sm:w-14" />
           <span>Central intelligence / 001</span>
           <span className="h-px w-8 bg-cyber-blue/60 sm:w-14" />
