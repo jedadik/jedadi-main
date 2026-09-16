@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jedadi.com"),
-  title: "JEDADI — Look Always Ahead",
+  title: "JEDADI",
   description:
     "Arquitectura cibernética y ecosistema modular: Productividad Anti-Estrés, Energía Solar Fotovoltaica y Aprendizaje Neuronal de Idiomas.",
   icons: {
