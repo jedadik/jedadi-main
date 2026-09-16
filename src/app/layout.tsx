@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   description:
     "Arquitectura cibernética y ecosistema modular: Productividad Anti-Estrés, Energía Solar Fotovoltaica y Aprendizaje Neuronal de Idiomas.",
   icons: {
-    icon: "/logo.png?v=2",
+    icon: [{ url: "/logo.png?v=2", type: "image/png" }],
     apple: "/logo.png?v=2",
   },
   openGraph: {
     title: "JEDADI — Look Always Ahead",
     description:
       "Arquitectura cibernética y ecosistema modular: Productividad Anti-Estrés, Energía Solar Fotovoltaica y Aprendizaje Neuronal de Idiomas.",
-    images: ["/emblem.png"],
+    images: ["/logo.png"],
   },
 };
 
